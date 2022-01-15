@@ -16,6 +16,11 @@
 		780AF1B027900C280062FAB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780AF1AE27900C280062FAB8 /* LaunchScreen.storyboard */; };
 		780AF1B327900C280062FAB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 780AF1B227900C280062FAB8 /* main.m */; };
 		780AF1BD27901B940062FAB8 /* XXBCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 780AF1BC27901B940062FAB8 /* XXBCollectionViewFlowLayout.m */; };
+		786DD1DA27929A7700DC7B10 /* XXBCollectionViewRotateInOutLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 786DD1D927929A7700DC7B10 /* XXBCollectionViewRotateInOutLayout.m */; };
+		786DD1DD2792A32B00DC7B10 /* XXBCollectionViewZoomInOutLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 786DD1DC2792A32B00DC7B10 /* XXBCollectionViewZoomInOutLayout.m */; };
+		786DD1E02792A67400DC7B10 /* XXBCollectionViewLinearCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 786DD1DF2792A67400DC7B10 /* XXBCollectionViewLinearCardLayout.m */; };
+		786DD1E32792AA9D00DC7B10 /* XXBCollectionViewPageLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 786DD1E22792AA9D00DC7B10 /* XXBCollectionViewPageLayout.m */; };
+		786DD1E62792B0AE00DC7B10 /* XXBCollectionViewParallaxLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 786DD1E52792B0AE00DC7B10 /* XXBCollectionViewParallaxLayout.m */; };
 		78EE90B22791613500462ECA /* XXBCollectionViewLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE90B12791613500462ECA /* XXBCollectionViewLayoutAttributes.m */; };
 		78EE90B52791627200462ECA /* XXBCollectionViewCubeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE90B42791627200462ECA /* XXBCollectionViewCubeLayout.m */; };
 		78EE90B8279163C800462ECA /* XXBCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE90B7279163C800462ECA /* XXBCollectionViewController.m */; };
@@ -38,6 +43,16 @@
 		780AF1B227900C280062FAB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		780AF1BB27901B940062FAB8 /* XXBCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		780AF1BC27901B940062FAB8 /* XXBCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		786DD1D827929A7700DC7B10 /* XXBCollectionViewRotateInOutLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBCollectionViewRotateInOutLayout.h; sourceTree = "<group>"; };
+		786DD1D927929A7700DC7B10 /* XXBCollectionViewRotateInOutLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBCollectionViewRotateInOutLayout.m; sourceTree = "<group>"; };
+		786DD1DB2792A32B00DC7B10 /* XXBCollectionViewZoomInOutLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBCollectionViewZoomInOutLayout.h; sourceTree = "<group>"; };
+		786DD1DC2792A32B00DC7B10 /* XXBCollectionViewZoomInOutLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBCollectionViewZoomInOutLayout.m; sourceTree = "<group>"; };
+		786DD1DE2792A67400DC7B10 /* XXBCollectionViewLinearCardLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBCollectionViewLinearCardLayout.h; sourceTree = "<group>"; };
+		786DD1DF2792A67400DC7B10 /* XXBCollectionViewLinearCardLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBCollectionViewLinearCardLayout.m; sourceTree = "<group>"; };
+		786DD1E12792AA9D00DC7B10 /* XXBCollectionViewPageLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBCollectionViewPageLayout.h; sourceTree = "<group>"; };
+		786DD1E22792AA9D00DC7B10 /* XXBCollectionViewPageLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBCollectionViewPageLayout.m; sourceTree = "<group>"; };
+		786DD1E42792B0AE00DC7B10 /* XXBCollectionViewParallaxLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBCollectionViewParallaxLayout.h; sourceTree = "<group>"; };
+		786DD1E52792B0AE00DC7B10 /* XXBCollectionViewParallaxLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBCollectionViewParallaxLayout.m; sourceTree = "<group>"; };
 		78EE90B02791613500462ECA /* XXBCollectionViewLayoutAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBCollectionViewLayoutAttributes.h; sourceTree = "<group>"; };
 		78EE90B12791613500462ECA /* XXBCollectionViewLayoutAttributes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBCollectionViewLayoutAttributes.m; sourceTree = "<group>"; };
 		78EE90B32791627200462ECA /* XXBCollectionViewCubeLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBCollectionViewCubeLayout.h; sourceTree = "<group>"; };
@@ -113,16 +128,34 @@
 		780AF1BA27901B6D0062FAB8 /* XXBCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				786DD1D72792998700DC7B10 /* XXBAnimationLayout */,
 				780AF1BB27901B940062FAB8 /* XXBCollectionViewFlowLayout.h */,
 				780AF1BC27901B940062FAB8 /* XXBCollectionViewFlowLayout.m */,
 				78EE90B02791613500462ECA /* XXBCollectionViewLayoutAttributes.h */,
 				78EE90B12791613500462ECA /* XXBCollectionViewLayoutAttributes.m */,
+			);
+			path = XXBCollectionView;
+			sourceTree = "<group>";
+		};
+		786DD1D72792998700DC7B10 /* XXBAnimationLayout */ = {
+			isa = PBXGroup;
+			children = (
 				78EE90B32791627200462ECA /* XXBCollectionViewCubeLayout.h */,
 				78EE90B42791627200462ECA /* XXBCollectionViewCubeLayout.m */,
 				78EE90B927916D0200462ECA /* XXBCollectionViewAnimateLayout.h */,
 				78EE90BA27916D0200462ECA /* XXBCollectionViewAnimateLayout.m */,
+				786DD1D827929A7700DC7B10 /* XXBCollectionViewRotateInOutLayout.h */,
+				786DD1D927929A7700DC7B10 /* XXBCollectionViewRotateInOutLayout.m */,
+				786DD1DB2792A32B00DC7B10 /* XXBCollectionViewZoomInOutLayout.h */,
+				786DD1DC2792A32B00DC7B10 /* XXBCollectionViewZoomInOutLayout.m */,
+				786DD1DE2792A67400DC7B10 /* XXBCollectionViewLinearCardLayout.h */,
+				786DD1DF2792A67400DC7B10 /* XXBCollectionViewLinearCardLayout.m */,
+				786DD1E12792AA9D00DC7B10 /* XXBCollectionViewPageLayout.h */,
+				786DD1E22792AA9D00DC7B10 /* XXBCollectionViewPageLayout.m */,
+				786DD1E42792B0AE00DC7B10 /* XXBCollectionViewParallaxLayout.h */,
+				786DD1E52792B0AE00DC7B10 /* XXBCollectionViewParallaxLayout.m */,
 			);
-			path = XXBCollectionView;
+			path = XXBAnimationLayout;
 			sourceTree = "<group>";
 		};
 		B9D158E6CBA45CD7AFFBE398 /* Frameworks */ = {
@@ -231,12 +264,17 @@
 			files = (
 				780AF1A827900C260062FAB8 /* ViewController.m in Sources */,
 				780AF1A227900C260062FAB8 /* AppDelegate.m in Sources */,
+				786DD1DA27929A7700DC7B10 /* XXBCollectionViewRotateInOutLayout.m in Sources */,
 				780AF1B327900C280062FAB8 /* main.m in Sources */,
 				780AF1BD27901B940062FAB8 /* XXBCollectionViewFlowLayout.m in Sources */,
 				78EE90BB27916D0200462ECA /* XXBCollectionViewAnimateLayout.m in Sources */,
+				786DD1E62792B0AE00DC7B10 /* XXBCollectionViewParallaxLayout.m in Sources */,
 				78EE90B22791613500462ECA /* XXBCollectionViewLayoutAttributes.m in Sources */,
+				786DD1E32792AA9D00DC7B10 /* XXBCollectionViewPageLayout.m in Sources */,
 				78EE90B8279163C800462ECA /* XXBCollectionViewController.m in Sources */,
 				780AF1A527900C260062FAB8 /* SceneDelegate.m in Sources */,
+				786DD1DD2792A32B00DC7B10 /* XXBCollectionViewZoomInOutLayout.m in Sources */,
+				786DD1E02792A67400DC7B10 /* XXBCollectionViewLinearCardLayout.m in Sources */,
 				78EE90B52791627200462ECA /* XXBCollectionViewCubeLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

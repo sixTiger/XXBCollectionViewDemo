@@ -11,10 +11,19 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.perspective = -0.0010;
-        self.totalAngle = M_PI_2;
+        [self initDafaultData];
     }
     return self;
+}
+
+- (void)initDafaultData {
+    self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    self.itemSize = [UIScreen mainScreen].bounds.size;
+    self.minimumInteritemSpacing = 0;
+    self.minimumLineSpacing = 0;
+    self.sectionInset = UIEdgeInsetsZero;
+    self.perspective = -0.0010;
+    self.totalAngle = M_PI_2;
 }
 
 - (void)animateWithAttributes:(XXBCollectionViewLayoutAttributes *)attributes {

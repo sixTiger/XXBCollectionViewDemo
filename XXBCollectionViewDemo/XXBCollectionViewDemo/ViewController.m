@@ -8,6 +8,11 @@
 #import "ViewController.h"
 #import "XXBCollectionViewCubeLayout.h"
 #import "XXBCollectionViewController.h"
+#import "XXBCollectionViewRotateInOutLayout.h"
+#import "XXBCollectionViewZoomInOutLayout.h"
+#import "XXBCollectionViewLinearCardLayout.h"
+#import "XXBCollectionViewPageLayout.h"
+#import "XXBCollectionViewParallaxLayout.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -28,40 +33,36 @@
 
 - (void)initData {
     XXBCollectionViewCubeLayout *cubeLayout = [[XXBCollectionViewCubeLayout alloc] init];
-    cubeLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    cubeLayout.itemSize = [UIScreen mainScreen].bounds.size;
-    cubeLayout.minimumInteritemSpacing = 0;
-    cubeLayout.minimumLineSpacing = 0;
-    cubeLayout.sectionInset = UIEdgeInsetsZero;
     
     XXBCollectionViewCubeLayout *cubeLayout2 = [[XXBCollectionViewCubeLayout alloc] init];
     cubeLayout2.scrollDirection = UICollectionViewScrollDirectionVertical;
-    cubeLayout2.itemSize = [UIScreen mainScreen].bounds.size;
-    cubeLayout2.minimumInteritemSpacing = 0;
-    cubeLayout2.minimumLineSpacing = 0;
-    cubeLayout2.sectionInset = UIEdgeInsetsZero;
     
     XXBCollectionViewCubeLayout *cubeLayout3 = [[XXBCollectionViewCubeLayout alloc] init];
-    cubeLayout3.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    cubeLayout3.itemSize = [UIScreen mainScreen].bounds.size;
-    cubeLayout3.minimumInteritemSpacing = 0;
-    cubeLayout3.minimumLineSpacing = 0;
-    cubeLayout3.sectionInset = UIEdgeInsetsZero;
     cubeLayout3.totalAngle = M_PI;
     
     XXBCollectionViewCubeLayout *cubeLayout4 = [[XXBCollectionViewCubeLayout alloc] init];
     cubeLayout4.scrollDirection = UICollectionViewScrollDirectionVertical;
-    cubeLayout4.itemSize = [UIScreen mainScreen].bounds.size;
-    cubeLayout4.minimumInteritemSpacing = 0;
-    cubeLayout4.minimumLineSpacing = 0;
-    cubeLayout4.sectionInset = UIEdgeInsetsZero;
     cubeLayout4.totalAngle = M_PI;
     
+    XXBCollectionViewRotateInOutLayout *rotateInOutLayout = [[XXBCollectionViewRotateInOutLayout alloc] init];
+    
+    XXBCollectionViewZoomInOutLayout *zoomInOutLayout = [[XXBCollectionViewZoomInOutLayout alloc] init];
+    
+    XXBCollectionViewLinearCardLayout *linearCardLayout = [[XXBCollectionViewLinearCardLayout alloc] init];
+    
+    XXBCollectionViewPageLayout *pageLayout = [[XXBCollectionViewPageLayout alloc] init];
+    
+    XXBCollectionViewParallaxLayout *parallaxLayout = [[XXBCollectionViewParallaxLayout alloc] init];
     self.dataArray = @[
         cubeLayout,
         cubeLayout2,
         cubeLayout3,
-        cubeLayout4
+        cubeLayout4,
+        rotateInOutLayout,
+        zoomInOutLayout,
+        linearCardLayout,
+        pageLayout,
+        parallaxLayout
     ];
 }
 
