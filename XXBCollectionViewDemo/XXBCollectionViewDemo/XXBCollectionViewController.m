@@ -32,6 +32,7 @@
     [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
     collectionView.automaticallyAdjustsScrollIndicatorInsets = NO;
     collectionView.contentInsetAdjustmentBehavior =  UIScrollViewContentInsetAdjustmentNever;
+    collectionView.contentInset = UIEdgeInsetsZero;
     _collectionView = collectionView;
 }
 
@@ -55,5 +56,9 @@
     cell.backgroundColor = [UIColor yellowColor];
     cell.clipsToBounds = YES;
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"XXB | %@", indexPath);
 }
 @end

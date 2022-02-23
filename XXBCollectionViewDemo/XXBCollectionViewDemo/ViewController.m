@@ -13,6 +13,7 @@
 #import "XXBCollectionViewLinearCardLayout.h"
 #import "XXBCollectionViewPageLayout.h"
 #import "XXBCollectionViewParallaxLayout.h"
+#import "XXBCollectionViewLinear2Layout.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -53,6 +54,12 @@
     XXBCollectionViewPageLayout *pageLayout = [[XXBCollectionViewPageLayout alloc] init];
     
     XXBCollectionViewParallaxLayout *parallaxLayout = [[XXBCollectionViewParallaxLayout alloc] init];
+    
+    XXBCollectionViewLinear2Layout *linear2Layout = [[XXBCollectionViewLinear2Layout alloc] init];
+    
+    XXBCollectionViewLinear2Layout *linear2Layout2 = [[XXBCollectionViewLinear2Layout alloc] init];
+    linear2Layout2.scrollDirection = UICollectionViewScrollDirectionVertical;
+    
     self.dataArray = @[
         cubeLayout,
         cubeLayout2,
@@ -62,7 +69,9 @@
         zoomInOutLayout,
         linearCardLayout,
         pageLayout,
-        parallaxLayout
+        parallaxLayout,
+        linear2Layout,
+        linear2Layout2
     ];
 }
 
