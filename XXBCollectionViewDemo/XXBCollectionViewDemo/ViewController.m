@@ -14,6 +14,7 @@
 #import "XXBCollectionViewPageLayout.h"
 #import "XXBCollectionViewParallaxLayout.h"
 #import "XXBCollectionViewLinear2Layout.h"
+#import "XXBCollectionViewFrameAnimationLayout.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -60,6 +61,8 @@
     XXBCollectionViewLinear2Layout *linear2Layout2 = [[XXBCollectionViewLinear2Layout alloc] init];
     linear2Layout2.scrollDirection = UICollectionViewScrollDirectionVertical;
     
+    XXBCollectionViewFrameAnimationLayout *frameAnimationLayout = [[XXBCollectionViewFrameAnimationLayout alloc] init];
+    
     self.dataArray = @[
         cubeLayout,
         cubeLayout2,
@@ -71,7 +74,8 @@
         pageLayout,
         parallaxLayout,
         linear2Layout,
-        linear2Layout2
+        linear2Layout2,
+        frameAnimationLayout
     ];
 }
 

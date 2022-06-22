@@ -25,6 +25,7 @@
 		78EE90B52791627200462ECA /* XXBCollectionViewCubeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE90B42791627200462ECA /* XXBCollectionViewCubeLayout.m */; };
 		78EE90B8279163C800462ECA /* XXBCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE90B7279163C800462ECA /* XXBCollectionViewController.m */; };
 		78EE90BB27916D0200462ECA /* XXBCollectionViewAnimateLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE90BA27916D0200462ECA /* XXBCollectionViewAnimateLayout.m */; };
+		78F2A36E2861E16B009E123C /* XXBCollectionViewFrameAnimationLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F2A36D2861E16B009E123C /* XXBCollectionViewFrameAnimationLayout.m */; };
 		78F7E2C027C4DD6A00000754 /* XXBCollectionViewLinear2Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F7E2BF27C4DD6A00000754 /* XXBCollectionViewLinear2Layout.m */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 		78EE90B7279163C800462ECA /* XXBCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBCollectionViewController.m; sourceTree = "<group>"; };
 		78EE90B927916D0200462ECA /* XXBCollectionViewAnimateLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBCollectionViewAnimateLayout.h; sourceTree = "<group>"; };
 		78EE90BA27916D0200462ECA /* XXBCollectionViewAnimateLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBCollectionViewAnimateLayout.m; sourceTree = "<group>"; };
+		78F2A36C2861E16B009E123C /* XXBCollectionViewFrameAnimationLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBCollectionViewFrameAnimationLayout.h; sourceTree = "<group>"; };
+		78F2A36D2861E16B009E123C /* XXBCollectionViewFrameAnimationLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBCollectionViewFrameAnimationLayout.m; sourceTree = "<group>"; };
 		78F7E2BE27C4DD6A00000754 /* XXBCollectionViewLinear2Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBCollectionViewLinear2Layout.h; sourceTree = "<group>"; };
 		78F7E2BF27C4DD6A00000754 /* XXBCollectionViewLinear2Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBCollectionViewLinear2Layout.m; sourceTree = "<group>"; };
 		953CF680743BEA7504D2D2D8 /* Pods-XXBCollectionViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXBCollectionViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-XXBCollectionViewDemo/Pods-XXBCollectionViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				786DD1E52792B0AE00DC7B10 /* XXBCollectionViewParallaxLayout.m */,
 				78F7E2BE27C4DD6A00000754 /* XXBCollectionViewLinear2Layout.h */,
 				78F7E2BF27C4DD6A00000754 /* XXBCollectionViewLinear2Layout.m */,
+				78F2A36C2861E16B009E123C /* XXBCollectionViewFrameAnimationLayout.h */,
+				78F2A36D2861E16B009E123C /* XXBCollectionViewFrameAnimationLayout.m */,
 			);
 			path = XXBAnimationLayout;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				780AF1A227900C260062FAB8 /* AppDelegate.m in Sources */,
 				786DD1DA27929A7700DC7B10 /* XXBCollectionViewRotateInOutLayout.m in Sources */,
 				780AF1B327900C280062FAB8 /* main.m in Sources */,
+				78F2A36E2861E16B009E123C /* XXBCollectionViewFrameAnimationLayout.m in Sources */,
 				780AF1BD27901B940062FAB8 /* XXBCollectionViewFlowLayout.m in Sources */,
 				78F7E2C027C4DD6A00000754 /* XXBCollectionViewLinear2Layout.m in Sources */,
 				78EE90BB27916D0200462ECA /* XXBCollectionViewAnimateLayout.m in Sources */,
