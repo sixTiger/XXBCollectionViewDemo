@@ -71,7 +71,8 @@
 
     // Cache the contentView since we're going to use it a lot.
     if (attributes.contentView == nil) {
-        attributes.contentView = [[self.collectionView cellForItemAtIndexPath:attributes.indexPath] contentView];
+        attributes.cell = [self.collectionView cellForItemAtIndexPath:attributes.indexPath];
+        attributes.contentView = [attributes.cell contentView];
     }
     return attributes;
 }

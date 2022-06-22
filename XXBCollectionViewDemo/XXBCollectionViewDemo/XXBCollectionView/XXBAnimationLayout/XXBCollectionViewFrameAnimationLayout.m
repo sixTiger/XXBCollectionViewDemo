@@ -22,8 +22,8 @@
     self.minimumInteritemSpacing = 0;
     self.minimumLineSpacing = 0;
     self.sectionInset = UIEdgeInsetsZero;
-    self.maxScaleRate = 0.7;
-    self.minScaleRate = 0.6;
+    self.maxScaleRate = 0.915492;
+    self.minScaleRate = 0.742253;
     self.maxShowCount = 3;
 }
 
@@ -56,13 +56,7 @@
         }
     }
     NSArray *layoutAttributesForElements = [super layoutAttributesForElementsInRect:newRect];
-    NSMutableArray *transformedLayoutAttributes = [NSMutableArray array];
-    [layoutAttributesForElements enumerateObjectsUsingBlock:^(XXBCollectionViewLayoutAttributes *attributes, NSUInteger idx, BOOL * _Nonnull stop) {
-        XXBCollectionViewLayoutAttributes *transformedAttributes = [self transformLayoutAttributes:[attributes copy]];
-        [transformedLayoutAttributes addObject:transformedAttributes];
-    }];
-    
-    return transformedLayoutAttributes;
+    return layoutAttributesForElements;
 }
 
 
@@ -74,21 +68,39 @@
         case UICollectionViewScrollDirectionHorizontal:
         {
             CGFloat width = self.collectionView.frame.size.width;
+            CGFloat cellWidth = self.itemSize.width;
             CGFloat cellMargin =  width * (1 - self.maxScaleRate) * 0.5;
+            CGFloat cellPending = 0;
+            
+            if (self.maxShowCount > 1) {
+                //平均分成需要展示的份数
+                cellPending = (cellMargin * 2) / ((CGFloat) MAX(1, self.maxShowCount - 1));
+            } else {
+                // 只有一份 理论上用不到
+                cellPending = cellMargin * 2 / self.minScaleRate;
+            }
             CGFloat scaleFactor = 1.0;
             if (position <= 0) {
                 // 正在展示的以及正在展示的左边的cell
-                transform = CGAffineTransformMakeTranslation(0, 0);
+                transform = CGAffineTransformMakeTranslation(-cellMargin, 0);
                 scaleFactor = self.maxScaleRate;
+                attributes.contentView.layer.cornerRadius = attributes.cell.layer.cornerRadius;
+                attributes.contentView.clipsToBounds = attributes.cell.clipsToBounds;
+                
             } else if (position <= (self.maxShowCount - 0.5)) {
                 // 正在展示的右边的cell，在需要展示的氛围内的cell
-                scaleFactor = self.maxScaleRate - fabs(position / (double)self.maxShowCount) * (self.maxScaleRate - self.minScaleRate);
+                scaleFactor = self.maxScaleRate - fabs(position / (double)MAX(1, self.maxShowCount - 1)) * (self.maxScaleRate - self.minScaleRate);
                 scaleFactor = MAX(self.minScaleRate, scaleFactor);
                 scaleFactor = MIN(self.maxScaleRate, scaleFactor);
                 
+                attributes.contentView.layer.cornerRadius = attributes.cell.layer.cornerRadius / scaleFactor;
+                attributes.contentView.clipsToBounds = attributes.cell.clipsToBounds;
+                
                 CGFloat expectTranslationX =  - width * position;
-                expectTranslationX += cellMargin * position * 0.5;
-                transform = CGAffineTransformMakeTranslation(expectTranslationX, 0);
+                expectTranslationX -= cellMargin;
+                expectTranslationX += (cellPending * position);
+                expectTranslationX += (cellWidth * ( self.maxScaleRate - scaleFactor) * 0.5) ;
+                transform = CGAffineTransformMakeTranslation( expectTranslationX, 0);
             } else {
                 //  右边超过需要展示的数量的暂时不处理
                 transform = CGAffineTransformIdentity;

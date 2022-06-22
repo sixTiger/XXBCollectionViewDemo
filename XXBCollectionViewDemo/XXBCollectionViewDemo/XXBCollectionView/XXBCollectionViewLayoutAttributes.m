@@ -13,6 +13,7 @@
     
     XXBCollectionViewLayoutAttributes *layoutAttributes = [super copyWithZone:zone];
     layoutAttributes.contentView = self.contentView;
+    layoutAttributes.cell = self.cell;
     layoutAttributes.scrollDirection = self.scrollDirection;
     layoutAttributes.startOffset = self.startOffset;
     layoutAttributes.middleOffset = self.middleOffset;

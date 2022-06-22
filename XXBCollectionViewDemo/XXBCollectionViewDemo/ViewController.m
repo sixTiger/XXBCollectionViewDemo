@@ -62,6 +62,9 @@
     linear2Layout2.scrollDirection = UICollectionViewScrollDirectionVertical;
     
     XXBCollectionViewFrameAnimationLayout *frameAnimationLayout = [[XXBCollectionViewFrameAnimationLayout alloc] init];
+    CGFloat itemWidth = CGRectGetWidth([UIScreen mainScreen].bounds) - 20;
+    CGFloat itemHeight =  itemWidth / 325.0 * 183.0;
+    frameAnimationLayout.itemSize = CGSizeMake(itemWidth, itemHeight);
     
     self.dataArray = @[
         cubeLayout,

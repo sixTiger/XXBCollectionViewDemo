@@ -66,13 +66,7 @@
         }
     }
     NSArray *layoutAttributesForElements = [super layoutAttributesForElementsInRect:newRect];
-    NSMutableArray *transformedLayoutAttributes = [NSMutableArray array];
-    [layoutAttributesForElements enumerateObjectsUsingBlock:^(XXBCollectionViewLayoutAttributes *attributes, NSUInteger idx, BOOL * _Nonnull stop) {
-        XXBCollectionViewLayoutAttributes *transformedAttributes = [self transformLayoutAttributes:[attributes copy]];
-        [transformedLayoutAttributes addObject:transformedAttributes];
-    }];
-    
-    return transformedLayoutAttributes;
+    return layoutAttributesForElements;
 }
 
 

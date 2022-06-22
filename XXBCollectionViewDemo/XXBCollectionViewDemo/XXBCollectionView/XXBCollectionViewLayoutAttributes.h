@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XXBCollectionViewLayoutAttributes : UICollectionViewLayoutAttributes
 @property(nonatomic, weak) UIView  *contentView;
+@property(nonatomic, weak) UICollectionViewCell  *cell;
 @property(nonatomic, assign) UICollectionViewScrollDirection scrollDirection;
 /// The ratio of the distance between the start of the cell and the start of the collectionView and the height/width of the cell depending on the scrollDirection. It's 0 when the start of the cell aligns the start of the collectionView. It gets positive when the cell moves towards the scrolling direction (right/down) while getting negative when moves opposite.
 @property(nonatomic, assign) CGFloat startOffset;
