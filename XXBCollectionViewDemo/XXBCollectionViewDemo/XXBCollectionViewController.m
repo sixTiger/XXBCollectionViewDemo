@@ -20,6 +20,11 @@
     // Do any additional setup after loading the view.
     [self initCollectionView];
     self.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1.0];
+    [self.collectionView performBatchUpdates:^{
+        
+    } completion:^(BOOL finished) {
+        
+    }];
     
 }
 
@@ -64,10 +69,9 @@
         label.autoresizingMask = (1 << 6) - 1;
     }
     label.text = [NSString stringWithFormat:@"%@",indexPath];
-    cell.backgroundColor = [UIColor yellowColor];
+    cell.backgroundColor = [UIColor clearColor];
     cell.layer.cornerRadius = 5;
     cell.clipsToBounds = YES;
-    cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 
