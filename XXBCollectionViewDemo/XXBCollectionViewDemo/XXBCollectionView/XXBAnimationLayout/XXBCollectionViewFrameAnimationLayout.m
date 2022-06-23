@@ -24,7 +24,7 @@
     self.sectionInset = UIEdgeInsetsZero;
     self.maxScaleRate = 0.915492;
     self.minScaleRate = 0.742253;
-    self.maxShowCount = 8;
+    self.maxShowCount = 2;
 }
 
 
@@ -87,7 +87,7 @@
                 attributes.contentView.layer.cornerRadius = attributes.cell.layer.cornerRadius;
                 attributes.contentView.clipsToBounds = attributes.cell.clipsToBounds;
                 
-            } else if (position <= (self.maxShowCount - 0.5)) {
+            } else if (position < self.maxShowCount) {
                 // 正在展示的右边的cell，在需要展示的氛围内的cell
                 scaleFactor = self.maxScaleRate - fabs(position / (double)MAX(1, self.maxShowCount - 1)) * (self.maxScaleRate - self.minScaleRate);
                 scaleFactor = MAX(self.minScaleRate, scaleFactor);
