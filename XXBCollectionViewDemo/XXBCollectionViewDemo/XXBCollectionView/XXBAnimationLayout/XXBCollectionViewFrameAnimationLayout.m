@@ -24,7 +24,7 @@
     self.sectionInset = UIEdgeInsetsZero;
     self.maxScaleRate = 0.915492;
     self.minScaleRate = 0.742253;
-    self.maxShowCount = 3;
+    self.maxShowCount = 8;
 }
 
 
@@ -34,7 +34,7 @@
     CGFloat y = CGRectGetMinY(rect);
     CGFloat width = CGRectGetWidth(rect);
     CGFloat height = CGRectGetHeight(rect);
-    CGFloat itemWidth = self.itemSize.width;
+    CGFloat itemWidth = self.itemSize.width + self.minimumLineSpacing;
     
     switch (self.scrollDirection) {
         case UICollectionViewScrollDirectionHorizontal:
@@ -42,7 +42,7 @@
             
             newRect = CGRectMake(x - itemWidth,
                                  y,
-                                 width + itemWidth * 2,
+                                 width + itemWidth * self.maxShowCount,
                                  height);
             break;
         }
@@ -98,8 +98,8 @@
                 
                 CGFloat expectTranslationX =  - width * position;
                 expectTranslationX -= cellMargin;
-                expectTranslationX += (cellPending * position);
                 expectTranslationX += (cellWidth * ( self.maxScaleRate - scaleFactor) * 0.5) ;
+                expectTranslationX += (cellPending * position);
                 transform = CGAffineTransformMakeTranslation( expectTranslationX, 0);
             } else {
                 //  右边超过需要展示的数量的暂时不处理
