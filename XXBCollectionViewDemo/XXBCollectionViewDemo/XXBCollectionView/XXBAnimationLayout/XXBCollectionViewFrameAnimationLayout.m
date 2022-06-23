@@ -24,7 +24,7 @@
     self.sectionInset = UIEdgeInsetsZero;
     self.maxScaleRate = 0.915492;
     self.minScaleRate = 0.742253;
-    self.maxShowCount = 2;
+    self.maxShowCount = 3;
 }
 
 
@@ -99,12 +99,21 @@
                 CGFloat expectTranslationX =  - width * position;
                 expectTranslationX -= cellMargin;
                 expectTranslationX += (cellWidth * ( self.maxScaleRate - scaleFactor) * 0.5) ;
-                expectTranslationX += (cellPending * position);
+                expectTranslationX += (MIN(position, MAX(1, self.maxShowCount - 1)) * cellPending);
                 transform = CGAffineTransformMakeTranslation( expectTranslationX, 0);
             } else {
                 //  右边超过需要展示的数量的暂时不处理
-                transform = CGAffineTransformIdentity;
-                scaleFactor = 1.0;
+                // 正在展示的右边的cell，在需要展示的氛围内的cell
+                scaleFactor = self.minScaleRate;
+                attributes.contentView.layer.cornerRadius = attributes.cell.layer.cornerRadius / scaleFactor;
+                attributes.contentView.clipsToBounds = attributes.cell.clipsToBounds;
+                
+                CGFloat expectTranslationX =  - width * position;
+                expectTranslationX -= cellMargin;
+                expectTranslationX += (cellWidth * ( self.maxScaleRate - scaleFactor) * 0.5) ;
+                expectTranslationX += (MAX(1, self.maxShowCount - 1) * cellPending);
+                
+                transform = CGAffineTransformMakeTranslation( expectTranslationX, 0);
             }
             transform = CGAffineTransformScale(transform, scaleFactor, scaleFactor);
             break;
